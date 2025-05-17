@@ -1,0 +1,26 @@
+@font-face {
+	font-family: 'lFont';
+	src: url(./assets/fonts/x10y12pxDonguriDuel.ttf);
+}
+@font-face {
+	font-family: 'sFont';
+	src: url(./assets/fonts/madoufmg.ttf);
+}
+
+body {
+  margin: 0;
+
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+
+  padding: 0;
+  background-color: #5C849E; /* 黒背景にして白チラ防止 */
+  overflow-x: hidden;     /* 横スクロール防止 */
+  overscroll-behavior: none; /* モバイルでの反動スクロール防止 */
+  height: 100%;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}

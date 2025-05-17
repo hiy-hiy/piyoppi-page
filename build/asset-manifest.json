@@ -1,0 +1,31 @@
+{
+  "files": {
+    "main.css": "/static/css/main.b89b8491.css",
+    "main.js": "/static/js/main.67bb80b0.js",
+    "static/media/madoufmg.ttf": "/static/media/madoufmg.e617e281017b27c64b8d.ttf",
+    "static/media/BBKey3.png": "/static/media/BBKey3.05939e71bc9723eb4e3e.png",
+    "static/media/insta.png": "/static/media/insta.c6cf18cda6df517252a5.png",
+    "static/media/x.png": "/static/media/x.1db2b6b249cf2a0b09c7.png",
+    "static/media/BBKey2.png": "/static/media/BBKey2.bced3c4cf4606df95a5d.png",
+    "static/media/AITBomber.png": "/static/media/AITBomber.7582107560d762294a0a.png",
+    "static/media/react.png": "/static/media/react.4321a38878e1fa100f6b.png",
+    "static/media/together.png": "/static/media/together.2b9cd36f5c8880534499.png",
+    "static/media/c.png": "/static/media/c.68d85f88649b760f1306.png",
+    "static/media/cpp.png": "/static/media/cpp.053a898d752aef72651e.png",
+    "static/media/x10y12pxDonguriDuel.ttf": "/static/media/x10y12pxDonguriDuel.b7e958eb7af02ec8663c.ttf",
+    "static/media/python.png": "/static/media/python.632369df831d16241b59.png",
+    "static/media/blender.png": "/static/media/blender.1403786c53d756eb7794.png",
+    "static/media/dart.png": "/static/media/dart.0362ee549a453cf8fd20.png",
+    "static/media/cs.png": "/static/media/cs.fc430729bfa8902c06fd.png",
+    "static/media/flask.svg": "/static/media/flask.08c1b466970b061c71a3.svg",
+    "static/media/js.png": "/static/media/js.3abb3de3f1e1d537ad2e.png",
+    "static/media/java.svg": "/static/media/java.5e8cb917c7f11276e9f9.svg",
+    "index.html": "/index.html",
+    "main.b89b8491.css.map": "/static/css/main.b89b8491.css.map",
+    "main.67bb80b0.js.map": "/static/js/main.67bb80b0.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.b89b8491.css",
+    "static/js/main.67bb80b0.js"
+  ]
+}
