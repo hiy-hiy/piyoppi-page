@@ -1,0 +1,198 @@
+.textContainer {
+  font-size: clamp(1rem, 1.5vw, 1.25rem); /* ビューポートに応じてサイズ調整 */
+  padding: 1.5rem;
+  border-radius: 1rem;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  margin: 0 auto;
+}
+
+h2 {
+  font-size: clamp(1.5rem, 3vw, 2.5rem);
+}
+
+.description {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  line-height: 1.75;
+  font-family: sFont;
+}
+
+header {
+  font-size: clamp(7rem, 10vw, 14rem);
+}
+
+.headerA {
+  font-size: clamp(6rem, 7vw, 8rem);
+}
+
+.productContainer {
+  padding: 30px 0px;
+  display: flex;
+  height: 200vh;
+  align-items: flex-start;
+  width: 100%;
+}
+
+.videoWrapper {
+  width: 50%;
+  height: auto;
+  margin-bottom: 1rem;
+}
+
+.leftFadeIn {
+  position: sticky;
+  top: 10%;
+  height: fit-content;
+  text-align: left;
+  margin-left: 8%;
+
+  /* スクロールアニメーションの設定 */
+  animation: leftFadeIn 0.5s ease-out both; /* アニメーションを指定 */
+  animation-timeline: view();
+  animation-range: contain -100% contain 120%;
+}
+
+@keyframes leftFadeIn {
+  0% {
+    top: 10%;
+    opacity: 0;
+    transform: translateX(-200px);
+  }
+  60% {
+    top: 15%;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-100px);
+  }
+}
+
+.rightFadeIn {
+  display: flex;
+  flex-direction: column;     /* 子要素を縦並びにする */
+  align-items: flex-end;      /* 子要素を右寄せにする */
+  position: sticky;
+  top: 10%;
+  height: fit-content;
+  margin-right: 8%;
+
+  /* スクロールアニメーションの設定 */
+  animation: rightFadeIn 0.5s ease-out both; /* アニメーションを指定 */
+  animation-timeline: view();
+  animation-range: contain -100% contain 120%;
+}
+
+@keyframes rightFadeIn {
+  0% {
+    top: 10%;
+    opacity: 0;
+    transform: translateX(200px);
+  }
+  60% {
+    top: 15%;
+    opacity: 1;
+    transform: translateX(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(100px);
+  }
+}
+.rightFadeIn img {
+  width: 60%;
+  height: auto;
+  border-radius: 20px;
+  margin-bottom: 1rem;
+}
+
+.rightFadeIn video {
+  width: 50%;
+  height: auto;
+  border-radius: 15px;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.centerFadeIn {
+  display: flex;
+  text-align: center;
+  flex-direction: column;     /* 子要素を縦並びにする */
+  position: sticky;
+  top: 10%;
+
+  /* スクロールアニメーションの設定 */
+  animation: centerFadeIn 0.5s ease-out both; /* アニメーションを指定 */
+  animation-timeline: view();
+  animation-range: contain 0% contain 120%;
+}
+
+@keyframes centerFadeIn {
+  0% {
+    top: 10%;
+    opacity: 0;
+  }
+  95% {
+    top: 15%;
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .productContainer {
+    flex-direction: column;
+    align-items: center;
+    height: auto;
+  }
+
+  .leftFadeIn,
+  .rightFadeIn {
+    position: static; /* stickyだとスマホでは不自然 */
+    width: 90%;
+    margin: 2rem auto;
+    animation: none; /* スクロールアニメーションを無効に */
+  }
+
+  .rightFadeIn {
+    align-items: center; /* 中央寄せ */
+  }
+
+  .videoWrapper {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  img {
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+  }
+
+  header {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+  }
+  .headerA {
+    font-size: clamp(2.5rem, 8vw, 6rem);
+  }
+
+  h2 {
+    text-align: center;
+  }
+
+  .description {
+    text-align: center;
+  }
+}
