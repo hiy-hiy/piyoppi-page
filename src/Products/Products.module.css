@@ -10,6 +10,7 @@
 
 h2 {
   font-size: clamp(1.5rem, 3vw, 2.5rem);
+  margin: 0rem;
 }
 
 .description {
@@ -29,7 +30,7 @@ header {
 .productContainer {
   padding: 30px 0px;
   display: flex;
-  height: 200vh;
+  height: 150vh;
   align-items: flex-start;
   width: 100%;
 }
@@ -40,83 +41,33 @@ header {
   margin-bottom: 1rem;
 }
 
-.leftFadeIn {
+.leftContainer {
   position: sticky;
   top: 10%;
   height: fit-content;
   text-align: left;
-  margin-left: 8%;
-
-  /* スクロールアニメーションの設定 */
-  animation: leftFadeIn 0.5s ease-out both; /* アニメーションを指定 */
-  animation-timeline: view();
-  animation-range: contain -100% contain 120%;
+  margin-left: 10%;
 }
 
-@keyframes leftFadeIn {
-  0% {
-    top: 10%;
-    opacity: 0;
-    transform: translateX(-200px);
-  }
-  60% {
-    top: 15%;
-    opacity: 1;
-    transform: translateX(0);
-  }
-  90% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(-100px);
-  }
-}
-
-.rightFadeIn {
+.rightContainer {
   display: flex;
   flex-direction: column;     /* 子要素を縦並びにする */
   align-items: flex-end;      /* 子要素を右寄せにする */
   position: sticky;
   top: 10%;
   height: fit-content;
-  margin-right: 8%;
-
-  /* スクロールアニメーションの設定 */
-  animation: rightFadeIn 0.5s ease-out both; /* アニメーションを指定 */
-  animation-timeline: view();
-  animation-range: contain -100% contain 120%;
+  margin-right: 10%;
 }
 
-@keyframes rightFadeIn {
-  0% {
-    top: 10%;
-    opacity: 0;
-    transform: translateX(200px);
-  }
-  60% {
-    top: 15%;
-    opacity: 1;
-    transform: translateX(0);
-  }
-  90% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    opacity: 0;
-    transform: translateX(100px);
-  }
-}
-.rightFadeIn img {
+
+.rightContainer img {
   width: 60%;
   height: auto;
   border-radius: 20px;
   margin-bottom: 1rem;
 }
 
-.rightFadeIn video {
+.rightContainer video {
   width: 50%;
   height: auto;
   border-radius: 15px;
@@ -124,32 +75,14 @@ header {
   margin-bottom: 10px;
 }
 
-.centerFadeIn {
+.centerContainer {
   display: flex;
   text-align: center;
   flex-direction: column;     /* 子要素を縦並びにする */
   position: sticky;
-  top: 10%;
-
-  /* スクロールアニメーションの設定 */
-  animation: centerFadeIn 0.5s ease-out both; /* アニメーションを指定 */
-  animation-timeline: view();
-  animation-range: contain 0% contain 120%;
+  top: 20%;
 }
 
-@keyframes centerFadeIn {
-  0% {
-    top: 10%;
-    opacity: 0;
-  }
-  95% {
-    top: 15%;
-    opacity: 1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 
 @media screen and (max-width: 768px) {
   .productContainer {
@@ -158,15 +91,15 @@ header {
     height: auto;
   }
 
-  .leftFadeIn,
-  .rightFadeIn {
+  .leftContainer,
+  .rightContainer {
     position: static; /* stickyだとスマホでは不自然 */
     width: 90%;
     margin: 2rem auto;
     animation: none; /* スクロールアニメーションを無効に */
   }
 
-  .rightFadeIn {
+  .rightContainer {
     align-items: center; /* 中央寄せ */
   }
 
@@ -190,6 +123,7 @@ header {
 
   h2 {
     text-align: center;
+    margin: 0rem;
   }
 
   .description {

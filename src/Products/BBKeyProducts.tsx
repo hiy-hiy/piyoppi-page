@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { motion } from "framer-motion";
 
 import styles from './Products.module.css';
 
@@ -12,7 +13,13 @@ const BBKeyProduct: React.FC = () => {
   return (
     <div ref={ref} className={styles.productContainer} style={{background: '#2b5278'}}>
       {/* テキスト（画像と並行して左から出現） */}
-      <div className={styles.leftFadeIn}>
+      <motion.div
+        className={styles.leftContainer}
+        initial={{ opacity: 0, x: -30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.9 }} // 一度だけ実行する（true）、毎回実行したいなら false
+        transition={{ duration: 1.5 }}
+      >
         <header>BBKey</header>
 
         <h2>概要</h2>
@@ -30,10 +37,16 @@ const BBKeyProduct: React.FC = () => {
           </div>
         </div>
 
-      </div>
+      </motion.div>
         
 
-      <div className={styles.rightFadeIn}>
+      <motion.div
+        className={styles.rightContainer}
+        initial={{ opacity: 0, x: 30 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true, amount: 0.9 }} // 一度だけ実行する（true）、毎回実行したいなら false
+        transition={{ duration: 1.5 }}
+      >
         <img
           src={BBkeyImg2}
           alt="BBkey画像2"
@@ -43,7 +56,7 @@ const BBKeyProduct: React.FC = () => {
           src={BBkeyImg3}
           alt="BBkey画像3"
         />
-      </div>
+      </motion.div>
     </div>
   );
 };
