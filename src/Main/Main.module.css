@@ -70,6 +70,11 @@ h2 {
     max-width: auto;
     font-family: 'sFont';
 }
+@media screen and (max-width: 768px) {
+    .textContainer{
+        margin: 0rem 1rem;
+    }
+}
 
 
 .description {
