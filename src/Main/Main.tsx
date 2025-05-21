@@ -50,7 +50,7 @@ const Main: React.FC = () => {
         <h2>About</h2>
         <div className={styles.textContainer}>
           <div className={styles.description}>
-            愛知工業大学３年生
+            愛知工業大学３年生、デジタルカルチャー研究室（小栗研究室）に所属している日吉駿斗です。興味の深いジャンルが定まっておらず、それが決まるまでいろんなことをしたいと思っています！
           </div>
         </div>
       </section>
@@ -83,7 +83,7 @@ const Main: React.FC = () => {
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
           style={{
-            marginTop: '3rem',
+            marginTop: '0rem',
             padding: '2rem 2rem',
             fontSize: '1.2rem',
             backgroundColor: 'rgba(255, 255, 255, 0.45)', 

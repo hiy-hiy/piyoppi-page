@@ -3,6 +3,7 @@ import React, { useRef } from 'react';
 import AITBomberImg from "../assets/productsImages/AITBomber.png";
 
 import styles from './Products.module.css';
+import { motion } from 'framer-motion';
 
 const AITBomberProduct: React.FC = () => {
 
@@ -13,7 +14,13 @@ const AITBomberProduct: React.FC = () => {
   return (
     <div ref={ref} className={styles.productContainer} style={{background: '#61787b'}}>
         {/* テキスト（画像と並行して左から出現） */}
-        <div className={styles.leftFadeIn}>
+        <motion.div
+          className={styles.leftContainer}
+          initial={{ opacity: 0, x: -30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.9 }} // 一度だけ実行する（true）、毎回実行したいなら false
+          transition={{ duration: 1.5 }}
+        >
           <div className={styles.headerA}>AITBomber</div>
 
           <h2>概要</h2>
@@ -30,11 +37,16 @@ const AITBomberProduct: React.FC = () => {
               javascript, HTML, CSS, <br />Python, Flask, Socket.io, GitHub
             </div>
           </div>
-        </div>
+        </motion.div>
         
         
-        <div className={styles.rightFadeIn}>
-          
+        <motion.div
+          className={styles.rightContainer}
+          initial={{ opacity: 0, x: 30 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true, amount: 0.9 }} // 一度だけ実行する（true）、毎回実行したいなら false
+          transition={{ duration: 1.5 }}
+        >
           <video
             controls
             autoPlay
@@ -53,7 +65,7 @@ const AITBomberProduct: React.FC = () => {
             alt="AITBomberImg"
           />
 
-        </div>
+        </motion.div>
       
     </div>
   );
