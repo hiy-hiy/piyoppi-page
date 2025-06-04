@@ -1,5 +1,4 @@
 .textContainer {
-  font-size: clamp(1rem, 1.5vw, 1.25rem); /* ビューポートに応じてサイズ調整 */
   padding: 1.5rem;
   border-radius: 1rem;
   background: rgba(255, 255, 255, 0.2);
@@ -9,22 +8,22 @@
 }
 
 h2 {
-  font-size: clamp(1.5rem, 3vw, 2.5rem);
+  font-size: 5vh;
   margin: 0rem;
 }
 
 .description {
-  font-size: clamp(1rem, 2vw, 1.5rem);
+  font-size: 3vmin;
   line-height: 1.75;
   font-family: sFont;
 }
 
 header {
-  font-size: clamp(7rem, 10vw, 14rem);
+  font-size: 15vw;
 }
 
 .headerA {
-  font-size: clamp(6rem, 7vw, 8rem);
+  font-size: 10vw;
 }
 
 .productContainer {
@@ -47,6 +46,7 @@ header {
   height: fit-content;
   text-align: left;
   margin-left: 10%;
+  width: 50%;
 }
 
 .rightContainer {
@@ -57,20 +57,21 @@ header {
   top: 10%;
   height: fit-content;
   margin-right: 10%;
+  width: 50%;
 }
 
 
 .rightContainer img {
-  width: 60%;
+  width: 80%;
   height: auto;
   border-radius: 20px;
   margin-bottom: 1rem;
 }
 
 .rightContainer video {
-  width: 50%;
+  width: 50vh;
   height: auto;
-  border-radius: 15px;
+  border-radius: 20px;
   object-fit: cover;
   margin-bottom: 10px;
 }
