@@ -27,12 +27,12 @@
 
 
 h1 {
-    font-size: 6rem;
+    font-size: 10vmin;
     margin-bottom: 0.001rem;
 }
   
 .titleSection p {
-    font-size: 2rem;
+    font-size: 6vmin;
     margin-bottom: 2rem;
 }
 
